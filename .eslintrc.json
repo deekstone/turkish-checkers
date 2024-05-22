@@ -1,0 +1,63 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "no-console": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "arrow-body-style": "error",
+        "react/no-array-index-key": "error",
+        "react/no-unused-state": "error",
+        "react/jsx-key": "error",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-no-comment-textnodes": "error",
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    [
+                        "external",
+                        "builtin"
+                    ],
+                    "internal",
+                    [
+                        "sibling",
+                        "parent"
+                    ],
+                    "index"
+                ],
+                "pathGroupsExcludedImportTypes": [
+                    "internal",
+                    "react"
+                ],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
+}
